@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+
+h1 {
+  animation:glow 5s linear infinite;
+  
+  
+
+/* For less laggy effect, uncomment this:
+  
+  animation:none;
+  -webkit-text-stroke:1px #fff; 
+  
+=========== */
+  
+}
+
+
+
+* { box-sizing:border-box; }
+
+body {
+  overflow:hidden;
+  text-align:center;
+  animation: background 5s linear infinite ;
+}
+@keyframes background{
+	0%,100%{ background-color: rgb(30, 0, 0); }
+	25%{  background-color: rgb(0, 30, 0); }
+	50%{  background-color: rgb(0, 0, 40); }
+	75%{ background-color: rgb(30, 8, 30); }
+}
+
+
+figure {
+  animation:wobble 5s ease-in-out infinite;
+  transform-origin:center center;
+  transform-style:preserve-3d;
+}
+
+@keyframes wobble {
+  0%,100%{ transform:rotate3d(1,1,0,40deg); }
+  25%{ transform:rotate3d(-1,1,0,40deg); }
+  50%{ transform:rotate3d(-1,-1,0,40deg); }
+  75%{ transform:rotate3d(1,-1,0,40deg); }
+}
+
+h1 {
+  display:block;
+  width:100%;
+  padding:10px;
+  padding-top: 10px;
+  line-height:1.5;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  text-transform:uppercase;
+  position:absolute;
+  color:#0a0a0a;
+  font-size: 200px;
+}
+@media(max-width: 760px){
+    h1{
+    font-size: 60px;
+  }   
+}
+
+@keyframes glow {
+  0%,100%{ text-shadow:0 0 30px tomato; }
+  25%{ text-shadow:0 0 30px orange; }
+  50%{ text-shadow:0 0 30px forestgreen; }
+  75%{ text-shadow:0 0 30px cyan; }
+}
+
+h1:nth-child(2){ transform:translateZ(5px); }
+h1:nth-child(3){ transform:translateZ(10px);}
+h1:nth-child(4){ transform:translateZ(15px); }
+h1:nth-child(5){ transform:translateZ(20px); }
+h1:nth-child(6){ transform:translateZ(25px); }
+h1:nth-child(7){ transform:translateZ(30px); }
+h1:nth-child(8){ transform:translateZ(35px); }
+h1:nth-child(9){ transform:translateZ(40px); }
+h1:nth-child(10){ transform:translateZ(45px); }
+
+
+
+	</style>
+</head>
+<body>
+	<figure>
+		  <h1 ></h1>
+      <h1 ></h1>
+      <h1 ></h1>
+      <h1 ></h1>
+      <h1 ></h1>
+      <h1 class="hide" ></h1>
+      <h1 class="hide" ></h1>
+      <h1 class="hide" ></h1>
+      <h1 class="hide"></h1>
+      <h1 class="hide"></h1>
+
+	</figure>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <script>
+    var arr = [];
+    var element = prompt("Enter you name");
+    var i;
+	for(i=0;i<10;i++){
+		arr[i] = element;
+	}
+
+	for(i=0;i<10;i++){
+		document.getElementsByTagName("h1")[i].innerHTML = arr[i];
+	}
+
+    </script>
+
+	<img src="pjimage.jpg" alt="" width="100">
+ 
+
+
+</body>
+</html>
