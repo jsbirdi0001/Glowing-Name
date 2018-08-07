@@ -63,15 +63,14 @@ h1 {
   text-transform:uppercase;
   position:absolute;
   color:#0a0a0a;
-  font-size: 200px;
+  font-size: 180px;
 }
 @media(max-width: 760px){
     h1{
     font-size: 55px;
-	    
   }   
 	.hide{
-		display: none;
+		display:none;
 	}
 }
 
@@ -92,7 +91,14 @@ h1:nth-child(8){ transform:translateZ(35px); }
 h1:nth-child(9){ transform:translateZ(40px); }
 h1:nth-child(10){ transform:translateZ(45px); }
 
-
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    opacity: 0.5;
+}
 
 	</style>
 </head>
@@ -139,7 +145,10 @@ h1:nth-child(10){ transform:translateZ(45px); }
  <audio autoplay loop>
     <source src="sound.mp3" type="audio/mpeg">
   </audio>
-
+<video autoplay muted loop id="myVideo">
+  <source src="video.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
 
 </body>
 </html>
